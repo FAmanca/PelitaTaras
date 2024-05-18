@@ -25,3 +25,17 @@ Route::get('/home',function () {
         'title' => 'Home'
     ]);
 });
+
+Route::get('/about',function () {
+    return view('about', [
+        'title' => 'About',
+        'image' => 'images/Arona.jpg'
+    ]);
+});
+
+Route::get('/post',function () {
+    return view('post', [
+        'title' => 'Blog'
+    ]);
+});
+

@@ -5,17 +5,14 @@
     </div>
     <ul class="nav-links">
         <li>
-            <a href="#">
+            <a href="/home">
                 <i class='bx bx-home-alt' ></i>
                 <span class="link_name">Home</span>
             </a>
-            <ul class="sub-menu blank">
-                <li><a class="link_name" href="#">Category</a></li>
-            </ul>
         </li>
         <li>
             <div class="iocn-link">
-                <a href="#">
+                <a href="/post">
                     <i class='bx bx-book-alt'></i>
                     <span class="link_name">Posts</span>
                 </a>
@@ -34,18 +31,18 @@
                 <i class='bx bx-message-add' ></i>
                 <span class="link_name">Konsultasi AI</span>
             </a>
-            <ul class="sub-menu blank">
-                <li><a class="link_name" href="#">Analytics</a></li>
-            </ul>
         </li>
         <li>
             <a href="#">
                 <i class='bx bx-food-menu'></i>
                 <span class="link_name">Kuis</span>
             </a>
-            <ul class="sub-menu blank">
-                <li><a class="link_name" href="#">Chart</a></li>
-            </ul>
+        </li>
+        <li>
+            <a href="/about">
+                <i class='bx bx-user'></i>
+                <span class="link_name">About Us</span>
+            </a>
         </li>
         <li>
             <div class="profile-details">
@@ -56,7 +53,7 @@
                     <div class="profile_name">Arona</div>
                     <div class="job">Siswa</div>
                 </div>
-                <i class='bx bx-log-out'></i>
+                <a href="/"><i class='bx bx-log-out'></i></a>
             </div>
         </li>
     </ul>

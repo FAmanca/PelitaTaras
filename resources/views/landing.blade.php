@@ -56,7 +56,7 @@
         <div class="container">
             <h2 class="subtitle">Memulai PelitaTaras</h2>
             <p class="description">Hanya dengan mendaftar kemudian login sesuai data siswa dan langsung bisa menggunakan aplikasi ini dan melakukan konsultasi</p>
-            <a href="/home">MULAI</a>
+            <a href="/home">LOGIN</a>
         </div>
     </div>
 
