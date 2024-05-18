@@ -1,0 +1,147 @@
+/* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    position: relative;
+    background-image: url('herobg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.description {
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.about {
+    padding: 80px 0;
+    text-align: center;
+    gap: 30px;
+}
+
+.subtitle {
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+/* Media Queries untuk Responsivitas */
+@media only screen and (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero {
+        padding: 40px 0;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 70%;
+}
+
+.card img {
+    display: block;
+    max-width: 100%;
+    max-height: 200px; /* Sesuaikan dengan tinggi yang diinginkan */
+    width: auto;
+    height: auto;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.max-w-border {
+    max-width: calc(100% - 40px); /* Adjust the value based on your padding */
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Dua kolom pada lebar minimal 768px */
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr); /* Tiga kolom pada lebar minimal 1024px */
+    }
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px; /* Jarak antar item */
+    margin-top: 10px;
+}
+
+a {
+    font-size: 27px;
+}
