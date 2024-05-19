@@ -6,7 +6,7 @@
     <ul class="nav-links">
         <li>
             <a href="/home">
-                <i class='bx bx-home-alt' ></i>
+                <i class='bx bx-home-alt'></i>
                 <span class="link_name">Home</span>
             </a>
         </li>
@@ -28,7 +28,7 @@
         </li>
         <li>
             <a href="#">
-                <i class='bx bx-message-add' ></i>
+                <i class='bx bx-message-add'></i>
                 <span class="link_name">Konsultasi AI</span>
             </a>
         </li>
@@ -40,20 +40,33 @@
         </li>
         <li>
             <a href="/about">
-                <i class='bx bx-user'></i>
+                <i class='bx bx-info-circle'></i>
                 <span class="link_name">About Us</span>
             </a>
         </li>
         <li>
+            <a href="{{ route('profile.edit') }}">
+                <i class='bx bx-user'></i>
+                <span class="link_name">Profil</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ route('logout') }}"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i class='bx bx-log-out'></i>
+                <span class="link_name">{{ __('Log Out') }}</span>
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+        </li>
+        <li>
             <div class="profile-details">
-                <div class="profile-content">
-                    <img src="images/arona.png" alt="profileImg">
-                </div>
                 <div class="name-job">
-                    <div class="profile_name">Arona</div>
-                    <div class="job">Siswa</div>
+                    <div class="profile_name">{{ Auth::user()->name }}</div>
+                    <div class="job">{{ Auth::user()->email }}</div>
                 </div>
-                <a href="/"><i class='bx bx-log-out'></i></a>
             </div>
         </li>
     </ul>

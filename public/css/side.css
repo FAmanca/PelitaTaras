@@ -298,6 +298,7 @@ p {
     font-size: 18px;
     font-weight: 500;
     white-space: nowrap;
+    margin-left: 15px;
 }
 
 .sidebar.close .profile-details i,
