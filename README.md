@@ -61,6 +61,46 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
+
+## Preparation
+
+setelah Clone Repo
+
+```bash
+    composer install
+    cp .env.example .env 
+```
+
+Kemudian buat db pada service sql sendiri dan atur pada file .env nya
+```bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=(namaDB)
+    DB_USERNAME=root
+    DB_PASSWORD=
+```
+
+dan lakukan migrasi data dengan
+```bash
+    php artisan migrate
+```
+
+jika sudah ada isi database nya bisa juga lakukan 
+```bash
+    php artisan migrate:fresh
+```
+untuk reset datanya
+
+## Running
+```bash
+    php artisan serve
+```
+di terminal kedua
+```bash
+    npm run dev
+```
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
