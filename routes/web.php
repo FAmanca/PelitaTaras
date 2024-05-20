@@ -26,9 +26,26 @@ Route::get('/', function () {
     }
 });
 
-Route::get('/admin', function () {
-    return 'Admin Page';
-})->middleware('checkrole:admin'); // Only admin can access this page
+// Admin routes with role check
+Route::middleware(['auth', 'checkrole:admin'])->group(function () {
+    Route::get('/admin', function () {
+        return view('admin', [
+            'title' => 'Admin Page',
+        ]);
+    })->name('admin');
+
+    Route::get('/kelolakuis', function () {
+        return view('kelolakuis', [
+            'title' => 'Kelola Kuis',
+        ]);
+    })->name('kelolakuis');
+
+    Route::get('/livechatadmin', function () {
+        return view('livechatadmin', [
+            'title' => 'Live Chat Admin',
+        ]);
+    })->name('livechatadmin');
+});
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('checkrole:guest,admin');
 
@@ -62,18 +79,6 @@ Route::get('/post', function () {
         'title' => 'Blog'
     ]);
 });
-
-Route::get('/admin', function () {
-    return view('/admin');
-})->name('admin');
-
-Route::get('/kelolakuis', function () {
-    return view('/kelolakuis');
-})->name('admin');
-
-Route::get('/livechatadmin', function () {
-    return view('/livechatadmin');
-})->name('admin');
 
 // Include authentication routes
 require __DIR__ . '/auth.php';
