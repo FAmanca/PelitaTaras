@@ -4,13 +4,13 @@
         <span class="logo_name">PelitaTaras</span>
     </div>
     <ul class="nav-links">
-        <li>
+        <li class="{{ Request::is('home') ? 'act' : '' }}">
             <a href="/home">
                 <i class='bx bx-home-alt'></i>
                 <span class="link_name">Home</span>
             </a>
         </li>
-        <li>
+        <li class="{{ Request::is('post') ? 'act' : '' }}">
             <div class="iocn-link">
                 <a href="/post">
                     <i class='bx bx-book-alt'></i>
@@ -18,7 +18,7 @@
                 </a>
             </div>
         </li>
-        <li>
+        <li class="">
             <div class="iocn-link">
                 <a href="#">
                     <i class='bx bx-chat'></i>
@@ -26,19 +26,19 @@
                 </a>
             </div>
         </li>
-        <li>
+        <li class="">
             <a href="#">
                 <i class='bx bx-message-add'></i>
                 <span class="link_name">Konsultasi AI</span>
             </a>
         </li>
-        <li>
+        <li class="">
             <a href="#">
                 <i class='bx bx-food-menu'></i>
                 <span class="link_name">Kuis</span>
             </a>
         </li>
-        <li>
+        <li class="{{ Request::is('about') ? 'act' : '' }}">
             <a href="/about">
                 <i class='bx bx-info-circle'></i>
                 <span class="link_name">About Us</span>
