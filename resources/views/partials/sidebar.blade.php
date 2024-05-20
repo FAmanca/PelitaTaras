@@ -50,7 +50,18 @@
                 <span class="link_name">Profil</span>
             </a>
         </li>
-
+        @if (Route::has('login'))
+            @auth
+                @if (auth()->user()->role === 'admin')
+                    <li>
+                        <a href="{{ route('admin') }}">
+                            <i class='bx bx-wrench'></i>
+                            <span class="link_name adminlink">ADMIN</span>
+                        </a>
+                    </li>
+                @endif
+            @endauth
+        @endif
         <li>
             <a href="{{ route('logout') }}"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

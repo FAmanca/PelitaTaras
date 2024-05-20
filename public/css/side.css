@@ -430,3 +430,10 @@ p {
 a {
     font-size: 27px;
 }
+
+.sidebar .nav-links li a .adminlink {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #fa9d01  ;
+    transition: all 0.4s ease;
+}
