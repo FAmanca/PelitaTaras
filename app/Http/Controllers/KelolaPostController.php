@@ -18,9 +18,36 @@ class KelolaPostController extends Controller
 
     public function show(Post $post)
     {
-        return view('post', [
+        return view('adminpost/editpost', [
             "title" => "Single Post",
             "post" => $post
         ]);
+    }
+
+    public function create()
+    {
+        return view('adminpost/createpost');
+    }
+
+    // public function edit(Post $post)
+    // {
+    //     return view('adminpost/editpost', [
+    //         "post" => $post
+    //     ]);
+    // }
+
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required',
+        ]);
+
+        $post = new Post;
+        $post->title = $validated['title'];
+        $post->content = $validated['content'];
+        $post->save();
+
+        return redirect()->route('posts.index')->with('success', 'Post created successfully.');
     }
 }

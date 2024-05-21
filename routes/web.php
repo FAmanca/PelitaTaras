@@ -36,12 +36,12 @@ Route::middleware(['auth', 'checkrole:admin'])->group(function () {
         ]);
     })->name('admin');
 
-    // Route::get('/kelolapost', function () {
-    //     return view('kelolapost', [
-    //         'title' => 'Kelola Post',
-    //     ]);
-    // })->name('admin');
-    Route::get('/kelolapost', [KelolaPostController::class, 'index'])->name('admin');
+    Route::get('/kelolapost', [KelolaPostController::class, 'index'])->name('kelolapost');
+
+    Route::get('/adminpost', [KelolaPostController::class, 'create'])->name('adminpost.createpost');
+
+    // Route::get('/editpost', [KelolaPostController::class, 'edit'])->name('adminpost.editpost');
+    Route::get('/adminpost/{post}', [KelolaPostController::class, 'show'])->name('adminpost.editpost');
 
     Route::get('/kelolakuis', function () {
         return view('kelolakuis', [
@@ -54,6 +54,7 @@ Route::middleware(['auth', 'checkrole:admin'])->group(function () {
             'title' => 'Live Chat Admin',
         ]);
     })->name('livechatadmin');
+
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('checkrole:guest,admin');
@@ -80,12 +81,6 @@ Route::get('/about', function () {
     return view('about', [
         'title' => 'About',
         'image' => 'images/Arona.jpg'
-    ]);
-});
-
-Route::get('/tes', function () {
-    return view('tes', [
-        'title' => 'tesonly'
     ]);
 });
 
