@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,10 +76,19 @@ Route::get('/about', function () {
 });
 
 Route::get('/post', function () {
-    return view('post', [
+    return view('posts', [
         'title' => 'Blog'
     ]);
 });
+
+Route::get('/tes', function () {
+    return view('tes', [
+        'title' => 'tesonly'
+    ]);
+});
+
+Route::get('/post', [PostController::class, 'index']);
+Route::get('/post/{post}', [PostController::class, 'show']);
 
 // Include authentication routes
 require __DIR__ . '/auth.php';
