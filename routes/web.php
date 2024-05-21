@@ -75,19 +75,13 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/post', function () {
-    return view('posts', [
-        'title' => 'Blog'
-    ]);
-});
-
 Route::get('/tes', function () {
     return view('tes', [
         'title' => 'tesonly'
     ]);
 });
 
-Route::get('/post', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index']);
 Route::get('/post/{post}', [PostController::class, 'show']);
 
 // Include authentication routes

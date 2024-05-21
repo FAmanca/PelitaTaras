@@ -1,6 +1,6 @@
 <div class="sidebar close">
     <div class="logo-details">
-        <i><img src="images/logo.png" alt="" srcset="" width="50"></i>
+        <i><img src="{{ asset('images/logo.png') }}" alt="" srcset="" width="50"></i>
         <span class="logo_name">PelitaTaras</span>
     </div>
     <ul class="nav-links">
@@ -10,9 +10,9 @@
                 <span class="link_name">Home</span>
             </a>
         </li>
-        <li class="{{ Request::is('post') ? 'act' : '' }}">
+        <li class="{{ Request::is('posts') ? 'act' : '' }}">
             <div class="iocn-link">
-                <a href="/post">
+                <a href="/posts">
                     <i class='bx bx-book-alt'></i>
                     <span class="link_name">Posts</span>
                 </a>
