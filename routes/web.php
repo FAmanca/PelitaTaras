@@ -17,7 +17,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     if (auth()->check()) {
-        return auth()->user()->role === 'admin' ? redirect('/admin') : redirect('/home');
+        return auth()->user()->role === 'admin' ? redirect('/home') : redirect('/home');
     } else {
         return view('landing', [
             'title' => "Landing",
