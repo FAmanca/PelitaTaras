@@ -6,6 +6,12 @@
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('admin') ? 'active' : '' }}" href="/admin">
+                            <span data-feather="home"></span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::is('kelolapost') ? 'active' : '' }}" href="/kelolapost">
                             <span data-feather="file-plus"></span>
                             Kelola Postingan
                         </a>

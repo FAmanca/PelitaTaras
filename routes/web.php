@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\KelolaPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,13 @@ Route::middleware(['auth', 'checkrole:admin'])->group(function () {
             'title' => 'Admin Page',
         ]);
     })->name('admin');
+
+    // Route::get('/kelolapost', function () {
+    //     return view('kelolapost', [
+    //         'title' => 'Kelola Post',
+    //     ]);
+    // })->name('admin');
+    Route::get('/kelolapost', [KelolaPostController::class, 'index'])->name('admin');
 
     Route::get('/kelolakuis', function () {
         return view('kelolakuis', [
