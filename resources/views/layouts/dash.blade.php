@@ -23,6 +23,10 @@
                 font-size: 3.5rem;
             }
         }
+
+        body {
+            background-color: #e7d9d9;
+        }
     </style>
 
 

@@ -102,3 +102,7 @@ body {
 .bg-blue {
     background-color: #4ba24c;
 }
+
+.bg-notlight {
+    background-color: #dbd1d1;
+}

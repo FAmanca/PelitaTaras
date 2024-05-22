@@ -54,13 +54,10 @@ Route::middleware(['auth', 'checkrole:admin'])->group(function () {
             'title' => 'Live Chat Admin',
         ]);
     })->name('livechatadmin');
-
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('checkrole:guest,admin');
-
-// Home page route only for authenticated users
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('checkauth');
 
 // Authenticated-only routes
 Route::middleware('auth')->group(function () {
