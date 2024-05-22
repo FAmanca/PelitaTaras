@@ -38,10 +38,9 @@ Route::middleware(['auth', 'checkrole:admin'])->group(function () {
 
     Route::get('/kelolapost', [KelolaPostController::class, 'index'])->name('kelolapost');
 
-    Route::get('/adminpost', [KelolaPostController::class, 'create'])->name('adminpost.createpost');
+    Route::get('/kelolapost/createpost', [KelolaPostController::class, 'create'])->name('createpost');
 
-    // Route::get('/editpost', [KelolaPostController::class, 'edit'])->name('adminpost.editpost');
-    Route::get('/adminpost/{post}', [KelolaPostController::class, 'show'])->name('adminpost.editpost');
+    Route::get('/kelolapost/editpost/{post}', [KelolaPostController::class, 'show'])->name('editpost');
 
     Route::get('/kelolakuis', function () {
         return view('kelolakuis', [

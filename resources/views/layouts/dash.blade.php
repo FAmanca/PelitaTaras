@@ -23,19 +23,15 @@
                 font-size: 3.5rem;
             }
         }
-
         body {
             background-color: #e7d9d9;
         }
     </style>
-
-
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 </head>
 
 <body>
-    @include('partials.headeradmin')
     @include('partials.sidebaradmin')
     <main class="container col-md-9 ms-sm-auto col-lg-10 px-md-4">
         @yield('container')

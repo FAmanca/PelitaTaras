@@ -18,7 +18,7 @@ class KelolaPostController extends Controller
 
     public function show(Post $post)
     {
-        return view('adminpost/editpost', [
+        return view('editpost', [
             "title" => "Single Post",
             "post" => $post
         ]);
@@ -26,7 +26,7 @@ class KelolaPostController extends Controller
 
     public function create()
     {
-        return view('adminpost/createpost');
+        return view('createpost');
     }
 
     // public function edit(Post $post)

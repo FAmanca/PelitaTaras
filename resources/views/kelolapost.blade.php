@@ -20,12 +20,12 @@
                         <td>{{ $post->title }}</td>
                         <td>{{ $post->author }}</td>
                         <td>{{ $post->created_at }}</td>
-                        <td><a href="adminpost/{{ $post->id }}"><button type="button" class="btn btn-warning btn-sm">Edit</button></a></td>
+                        <td><a href="kelolapost/editpost/{{ $post->id }}"><button type="button" class="btn btn-warning btn-sm">Edit</button></a></td>
                         <td><a href=""><button type="button" class="btn btn-danger btn-sm">Hapus</button></a></td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-        <a href="{{ route('adminpost.createpost') }}"><button type="button" class="btn btn-success">Tambah Postingan</button></a>
+        <a href="{{ route('createpost') }}"><button type="button" class="btn btn-success">Tambah Postingan</button></a>
     </main>
 @endsection
