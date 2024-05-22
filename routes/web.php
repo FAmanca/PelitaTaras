@@ -81,7 +81,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/posts', [PostController::class, 'index']);
-Route::get('/post/{post}', [PostController::class, 'show']);
+Route::get('/post/{post:slug}', [PostController::class, 'show']);
 Route::put('/kelolapost/editpost/{post}', [KelolaPostController::class, 'update']);
 Route::post('/kelolapost/createpost', [KelolaPostController::class, 'store'])->name('posts.store');
 Route::post('/kelolapost', [KelolaPostController::class, 'index'])->name('posts.index');
