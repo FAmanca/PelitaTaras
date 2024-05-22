@@ -20,8 +20,15 @@
                         <td>{{ $post->title }}</td>
                         <td>{{ $post->author }}</td>
                         <td>{{ $post->created_at }}</td>
-                        <td><a href="kelolapost/editpost/{{ $post->id }}"><button type="button" class="btn btn-warning btn-sm">Edit</button></a></td>
-                        <td><a href=""><button type="button" class="btn btn-danger btn-sm">Hapus</button></a></td>
+                        <td><a href="kelolapost/editpost/{{ $post->id }}"><button type="button"
+                                    class="btn btn-warning btn-sm">Edit</button></a></td>
+                        <td>
+                            <form action="{{ route('posts.destroy', $post->id) }}" method="POST" style="display: inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
