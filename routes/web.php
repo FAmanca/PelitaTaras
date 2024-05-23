@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KelolaPostController;
 
@@ -35,6 +36,8 @@ Route::middleware(['auth', 'checkrole:admin'])->group(function () {
             'title' => 'Admin Page',
         ]);
     })->name('admin');
+
+    Route::get('admin', [UsersController::class, 'index'])->name('admin');
 
     Route::get('/kelolapost', [KelolaPostController::class, 'index'])->name('kelolapost');
 
