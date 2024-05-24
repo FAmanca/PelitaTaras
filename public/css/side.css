@@ -1,3 +1,7 @@
+body {
+    background: #e4e9f7;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -142,8 +146,6 @@ p {
 .sidebar .nav-links .act {
     background: #1d1b31;
 }
-
-
 
 .sidebar .nav-links li .iocn-link {
     display: flex;
@@ -319,12 +321,16 @@ p {
 
 .home-section {
     position: relative;
-    background: #e4e9f7;
-    height: 100vh;
+    /* background: #e4e9f7; */
+    height: 100%;
     left: 260px;
     width: calc(100% - 260px);
     transition: all 0.5s ease;
     z-index: 50;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
 .sidebar.close ~ .home-section {
@@ -386,7 +392,7 @@ p {
     width: 70%;
 }
 
-.card img {
+.card .buled img {
     display: block;
     max-width: 100%;
     max-height: 200px; /* Sesuaikan dengan tinggi yang diinginkan */
@@ -398,6 +404,12 @@ p {
     object-fit: cover; /* Ensures the image covers the entire container */
     display: block;
     margin: 0 auto;
+}
+
+.card-text {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .card-body {
@@ -433,13 +445,24 @@ p {
     margin-top: 10px;
 }
 
-a {
+/* a {
     font-size: 27px;
-}
+} */
 
 .sidebar .nav-links li a .adminlink {
     font-size: 18px;
     font-weight: bolder;
-    color: #fa9d01  ;
+    color: #fa9d01;
     transition: all 0.4s ease;
+}
+
+.excerpt {
+    font-size: 20px;
+}
+
+.selengkapnya {
+    font-size: 15px;
+    color:#268332;
+    font-weight: bolder;
+
 }
