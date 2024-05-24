@@ -20,7 +20,7 @@
         </li>
         <li class="">
             <div class="iocn-link">
-                <a href="#">
+                <a href="/pelitachat">
                     <i class='bx bx-chat'></i>
                     <span class="link_name">Chat BK</span>
                 </a>
