@@ -1,18 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Validation\ValidationException;
 
 class KelolaPostController extends Controller
 {
     public function index()
     {
+        $posts = Post::orderBy('title')->get();
         return view('kelolapost', [
             "title" => "Kelola Post",
-            "posts" => Post::all()
+            "posts" => $posts
         ]);
     }
 
@@ -31,37 +34,55 @@ class KelolaPostController extends Controller
 
     public function store(Request $request)
     {
-        $post = new Post;
-        $post->title = $request->title;
-        $post->author = $request->author;
-        $post->excerpt = $request->excerpt;
-        $post->body = $request->body;
-        $post->save();
+        try {
+            $validatedData = $request->validate([
+                'title' => 'required|max:255',
+                'author' => 'required|max:255',
+                'excerpt' => 'required',
+                'body' => 'required',
+            ]);
 
-        return redirect()->route('posts.index');
+            $post = new Post;
+            $post->fill($validatedData);
+            $post->save();
+
+            return redirect()->route('posts.index')->with('success', 'Postingan Berhasil Ditambahkan');
+        } catch (ValidationException $e) {
+            return redirect()->back()->withErrors($e->errors())->withInput();
+        } catch (\Exception $e) {
+            return redirect()->route('posts.index')->with('error', 'Terjadi kesalahan. Mohon coba lagi nanti.');
+        }
     }
 
     public function update(Request $request, Post $post)
     {
-        $validatedData = $request->validate([
-            'title' => 'required|max:255',
-            'author' => 'required|max:255',
-            'excerpt' => 'required',
-            'body' => 'required',
-        ]);
+        try {
+            $validatedData = $request->validate([
+                'title' => 'required|max:255',
+                'author' => 'required|max:255',
+                'excerpt' => 'required',
+                'body' => 'required',
+            ]);
 
-        $post->update($validatedData);
+            $post->update($validatedData);
 
-        return redirect('/kelolapost')->with('success', 'Postingan berhasil diperbarui.');
+            return redirect('/kelolapost')->with('success', 'Postingan berhasil diperbarui.');
+        } catch (ValidationException $e) {
+            return redirect()->back()->withErrors($e->errors())->withInput();
+        } catch (\Exception $e) {
+            return redirect()->route('posts.index')->with('error', 'Terjadi kesalahan. Mohon coba lagi nanti.');
+        }
     }
 
     public function destroy($id)
     {
-        $post = Post::findOrFail($id);
-        $post->delete();
+        try {
+            $post = Post::findOrFail($id);
+            $post->delete();
 
-        return redirect::to('/kelolapost');
+            return Redirect::to('/kelolapost')->with('success', 'Postingan Berhasil Dihapus');
+        } catch (\Exception $e) {
+            return redirect()->route('posts.index')->with('error', 'Terjadi kesalahan. Mohon coba lagi nanti.');
+        }
     }
-
-
 }

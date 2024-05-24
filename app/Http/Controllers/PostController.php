@@ -9,9 +9,10 @@ class PostController extends Controller
 {
     public function index()
     {
+        $posts = Post::orderBy('title')->get();
         return view('posts', [
             "title" => "Posts",
-            "posts" => Post::all()
+            "posts" => $posts
         ]);
     }
 

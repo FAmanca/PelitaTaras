@@ -9,9 +9,10 @@ class UsersController extends Controller
 {
     public function index()
     {
+        $users = User::orderBy('name')->get();
         return view('admin', [
             "title" => "Posts",
-            "users" => User::all()
+            "users" => $users
         ]);
     }
 }
