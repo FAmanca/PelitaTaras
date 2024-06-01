@@ -35,12 +35,6 @@
                             Kelola Kuis
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ Request::is('livechatadmin') ? 'active' : '' }}" href="/livechatadmin ">
-                            <span data-feather="message-square"></span>
-                            LiveChat
-                        </a>
-                    </li>
                 </ul>
         </nav>
     </div>

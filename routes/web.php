@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\AichatController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KelolaPostController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,10 +79,22 @@ Route::middleware('auth')->group(function () {
 Route::get('/about', function () {
     return view('about', [
         'title' => 'About',
-        'image' => 'images/Arona.jpg'
+        'image' => 'css/herobg.jpg'
     ]);
 });
 
+Route::get('/kuis', function () {
+    return view('kuis', [
+        'title' => 'Kuis'
+    ]);
+});
+
+Route::get('/srq29', function () {
+    return view('srq29', [
+        'title' => 'SRQ29 TEST'
+    ]);
+});
+Route::get('/ai', [AichatController::class, 'index']);
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/post/{post:slug}', [PostController::class, 'show']);
 Route::put('/kelolapost/editpost/{post}', [KelolaPostController::class, 'update']);

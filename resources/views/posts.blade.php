@@ -7,7 +7,7 @@
         @foreach ($posts as $post)
             <div class="col">
                 <div class="card">
-                    <img src="{{ asset('images/Arona.jpg') }}" class="card-img-top" alt="">
+                    <img src="{{ asset('css/herobg2.jpg') }}" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title">{{ $post->title }}</h5>
                         <p class="card-text">By : {{ $post->author }}</p>

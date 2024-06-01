@@ -27,13 +27,13 @@
             </div>
         </li>
         <li class="">
-            <a href="#">
+            <a href="/ai">
                 <i class='bx bx-message-add'></i>
                 <span class="link_name">Konsultasi AI</span>
             </a>
         </li>
         <li class="">
-            <a href="#">
+            <a href="/kuis">
                 <i class='bx bx-food-menu'></i>
                 <span class="link_name">Kuis</span>
             </a>
@@ -66,7 +66,7 @@
             <a href="{{ route('logout') }}"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <i class='bx bx-log-out'></i>
-                <span class="link_name">{{ __('Log Out') }}</span>
+                <span class="link_name logot">{{ __('Log Out') }}</span>
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf

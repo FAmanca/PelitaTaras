@@ -14,32 +14,32 @@
             <div class="card">
                 <img src="{{ $image }}" alt="Image 1" class="w-full h-auto">
                 <div class="card-body">
-                    <h3 class="text-lg font-semibold mb-2">Card Title 1</h3>
+                    <h3 class="text-lg font-semibold mb-2">Nama</h3>
 
                 </div>
             </div>
             <div class="card">
                 <img src="{{ $image }}" alt="Image 1" class="w-full h-auto">
                 <div class="card-body">
-                    <h3 class="text-lg font-semibold mb-2">Card Title 1</h3>
+                    <h3 class="text-lg font-semibold mb-2">Nama</h3>
                 </div>
             </div>
             <div class="card">
                 <img src="{{ $image }}" alt="Image 1" class="w-full h-auto">
                 <div class="card-body">
-                    <h3 class="text-lg font-semibold mb-2">Card Title 1</h3>
+                    <h3 class="text-lg font-semibold mb-2">Nama</h3>
                 </div>
             </div>
             <div class="card">
                 <img src="{{ $image }}" alt="Image 1" class="w-full h-auto">
                 <div class="card-body">
-                    <h3 class="text-lg font-semibold mb-2">Card Title 1</h3>
+                    <h3 class="text-lg font-semibold mb-2">Nama</h3>
                 </div>
             </div>
             <div class="card">
                 <img src="{{ $image }}" alt="Image 1" class="w-full h-auto">
                 <div class="card-body img-thubmnail rounded-circle">
-                    <h3 class="text-lg font-semibold mb-2">Card Title 1</h3>
+                    <h3 class="text-lg font-semibold mb-2">Nama</h3>
                 </div>
             </div>
             <!-- Tambahkan card lainnya di sini -->

@@ -21,7 +21,7 @@
 
     <div class="hero">
         <div class="hero-content">
-            <h1>Ciri Ciri Gangguan Jawa</h1>
+            <h1>Ciri Ciri Gangguan Jiwa</h1>
             <p>Bagaimana Ciri Ciri Gangguan Mental emotional (GME)</p>
         </div>
     </div>

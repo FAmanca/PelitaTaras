@@ -5,7 +5,7 @@
         {{-- Header and search bar --}}
         <div class="m-header">
             <nav>
-                <a href="#"><i class="fas fa-inbox"></i> <span class="messenger-headTitle">MESSAGES</span> </a>
+                <a href="#"><i class="fas fa-inbox"></i> <span class="messenger-headTitle">PELITA CHAT</span> </a>
                 {{-- header buttons --}}
                 <nav class="m-header-right">
                     <a href="#"><i class="fas fa-cog settings-btn"></i></a>
@@ -30,9 +30,9 @@
                 <p class="messenger-title"><span>Favorites</span></p>
                 <div class="messenger-favorites app-scroll-hidden"></div>
                </div>
-               {{-- Saved Messages --}}
-               <p class="messenger-title"><span>Your Space</span></p>
-               {!! view('Chatify::layouts.listItem', ['get' => 'saved']) !!}
+               {{--TODO FOR Saved Messages --}}
+               {{-- <p class="messenger-title"><span>Your Space</span></p>
+               {!! view('Chatify::layouts.listItem', ['get' => 'saved']) !!} --}}
                {{-- Contact --}}
                <p class="messenger-title"><span>All Messages</span></p>
                <div class="listOfContacts" style="width: 100%;height: calc(100% - 272px);position: relative;"></div>

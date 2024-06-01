@@ -4,7 +4,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    /* color: #fff !important; */
+    background-color: #B2C5B2 !important;
 }
 
 .container {
@@ -150,7 +151,7 @@ body {
 }
 
 .navcolor {
-    background-color: #111827;
+    background-color: #264E49;
 }
 
 .h {

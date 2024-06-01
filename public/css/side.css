@@ -80,7 +80,7 @@ p {
     left: 0;
     height: 100%;
     width: 260px;
-    background: #323b53;
+    background: #264E49;
     z-index: 100;
     transition: all 0.5s ease;
 }
@@ -140,11 +140,11 @@ p {
 }
 
 .sidebar .nav-links li:hover {
-    background: #1d1b31;
+    background: #113532;
 }
 
 .sidebar .nav-links .act {
-    background: #1d1b31;
+    background: #113532;
 }
 
 .sidebar .nav-links li .iocn-link {
@@ -197,7 +197,7 @@ p {
 .sidebar .nav-links li .sub-menu {
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background: #1d1b31;
+    background: #113532;
     display: none;
 }
 
@@ -268,7 +268,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #1d1b31;
+    background: #113532;
     padding: 12px 0;
     transition: all 0.5s ease;
 }
@@ -452,7 +452,14 @@ p {
 .sidebar .nav-links li a .adminlink {
     font-size: 18px;
     font-weight: bolder;
-    color: #fa9d01;
+    color: #7cb69d;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li a .logot {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #f56060;
     transition: all 0.4s ease;
 }
 
