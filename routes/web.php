@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -36,26 +37,15 @@ Route::middleware(['auth', 'checkrole:admin'])->group(function () {
             'title' => 'Admin Page',
         ]);
     })->name('admin');
-
     Route::get('admin', [UsersController::class, 'index'])->name('admin');
-
     Route::get('/kelolapost', [KelolaPostController::class, 'index'])->name('kelolapost');
-
     Route::get('/kelolapost/createpost', [KelolaPostController::class, 'create'])->name('createpost');
-
     Route::get('/kelolapost/editpost/{post}', [KelolaPostController::class, 'show'])->name('editpost');
-
     Route::get('/kelolakuis', function () {
         return view('kelolakuis', [
             'title' => 'Kelola Kuis',
         ]);
     })->name('kelolakuis');
-
-    Route::get('/livechatadmin', function () {
-        return view('livechatadmin', [
-            'title' => 'Live Chat Admin',
-        ]);
-    })->name('livechatadmin');
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('checkrole:guest,admin');
@@ -75,14 +65,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Additional informational routes
-Route::get('/about', function () {
-    return view('about', [
-        'title' => 'About',
-        'image' => 'css/herobg.jpg'
-    ]);
-});
-
 Route::get('/kuis', function () {
     return view('kuis', [
         'title' => 'Kuis'
@@ -95,6 +77,7 @@ Route::get('/srq29', function () {
     ]);
 });
 Route::get('/ai', [AichatController::class, 'index']);
+Route::get('/about', [AboutController::class, 'index']);
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/post/{post:slug}', [PostController::class, 'show']);
 Route::put('/kelolapost/editpost/{post}', [KelolaPostController::class, 'update']);

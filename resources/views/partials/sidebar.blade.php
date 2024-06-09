@@ -35,7 +35,7 @@
         <li class="">
             <a href="/kuis">
                 <i class='bx bx-food-menu'></i>
-                <span class="link_name">Kuis</span>
+                <span class="link_name">SRQ-29</span>
             </a>
         </li>
         <li class="{{ Request::is('about') ? 'act' : '' }}">

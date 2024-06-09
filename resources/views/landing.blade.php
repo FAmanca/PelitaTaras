@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css"> <!-- Referensi ke CSS Vanilla -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -58,30 +59,9 @@
     </div>
     </div>
 
-
-    {{-- <div class="container mx-auto py-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="card">
-                <img src="{{ $image }}" alt="Image 1" class="w-full h-auto">
-                <div class="card-body">
-                    <h3 class="text-lg font-semibold mb-2">Card Title 1</h3>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="{{ $image }}" alt="Image 1" class="w-full h-auto">
-                <div class="card-body">
-                    <h3 class="text-lg font-semibold mb-2">Card Title 1</h3>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{{ $image }}" alt="Image 1" class="w-full h-auto">
-                <div class="card-body">
-                    <h3 class="text-lg font-semibold mb-2">Card Title 1</h3>
-                </div>
-            </div>
-        </div>
-    </div> --}}
+    <footer class="footer">
+        <p>PelitaTaras | &copy; {{ date('Y') }} Schale Organization. All rights reserved.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
