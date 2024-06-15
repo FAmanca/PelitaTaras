@@ -9,7 +9,9 @@
     <h1>KAPAN QUIZ INI DIBUAT?</h1>
     <P>quiz ini dibuat pada saat pembuaat web ini di kelas 10 di sekolah SMKN 11 BANDUNG,1 tim yang berisikan 4 orang  </P>
     <p>tanggal quiz ini dibuat 10-mei-1990</p> --}}
-
+    <br>
+    <h2 class="text-center">Petunjuk</h2>
+    <p>Bacalah petunjuk ini seluruhnya sebelum mulai mengisi. Pertanyaan berukut berhubungan dengan masalah yang mungkin mengganggu Anda selama 30 hari terakhir. Apabila Anda menganggap pertanyaan itu Anda alami dalam 30 hari terakhir, pilih opsi Ya dan sebaliknya , Apabila anda menganggap pertanyaan itu tidak Anda alami dalam 30 hari terakhir, pilihlah opsi tidak. Jika Anda tidak yakin tentang jawabannya, berilah jawaban yang paling sesuai diantara Ya dan Tidak. Kami tegaskan bahwa jawaban Anda bersifat rahasia dan akan digunakan hanya untuk membantu pemecahan masalah Anda.</p>
     <br>
     <a style="text-align: center" href="/srq29"><h2>MULAI MENGERJAKAN</h2></a>
 @endsection

@@ -8,6 +8,8 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\AichatController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KelolaPostController;
+use App\Http\Controllers\KuisController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,9 +50,6 @@ Route::middleware(['auth', 'checkrole:admin'])->group(function () {
     })->name('kelolakuis');
 });
 
-Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('checkrole:guest,admin');
-Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('checkauth');
-
 // Authenticated-only routes
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
@@ -65,17 +64,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/kuis', function () {
-    return view('kuis', [
-        'title' => 'Kuis'
-    ]);
-});
-
-Route::get('/srq29', function () {
-    return view('srq29', [
-        'title' => 'SRQ29 TEST'
-    ]);
-});
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('checkrole:guest,admin');
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('checkauth');
+Route::get('/kuis', [KuisController::class, 'index']);
+Route::get('/srq29', [KuisController::class, 'show']);
 Route::get('/ai', [AichatController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/posts', [PostController::class, 'index']);

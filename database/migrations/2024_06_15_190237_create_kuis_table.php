@@ -13,9 +13,6 @@ return new class extends Migration
     {
         Schema::create('kuis', function (Blueprint $table) {
             $table->id();
-            $table->string('quiztitle');
-            $table->string('quizauthor');
-            $table->timestamp('publish_at')->nullable();
             $table->timestamps();
         });
     }
