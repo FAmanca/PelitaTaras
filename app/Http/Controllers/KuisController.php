@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Kuis;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Validation\ValidationException;
 
 class KuisController extends Controller
 {
@@ -22,7 +24,7 @@ class KuisController extends Controller
      */
     public function create()
     {
-        //
+        return view('createkuis');
     }
 
     /**
@@ -30,7 +32,33 @@ class KuisController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $validatedData = $request->validate([
+                'nomor' => 'required|max:11',
+                'soal' => 'required',
+            ]);
+
+            $kuis = new Kuis;
+            $kuis->nomor = $validatedData['nomor'];
+            $kuis->soal = $validatedData['soal'];
+            $kuis->save();
+
+            return redirect()->route('kelolakuis')->with('success', 'Postingan Berhasil Ditambahkan');
+        } catch (ValidationException $e) {
+            return redirect()->back()->withErrors($e->errors())->withInput();
+        } catch (\Exception $e) {
+            return redirect()->route('kelolakuis')->with('error', 'Terjadi kesalahan. Mohon coba lagi nanti.');
+        }
+    }
+
+
+    public function kelola(Request $request)
+    {
+        $kuis = Kuis::all();
+        return view('kelolakuis', [
+            "title" => "Kelola Kuis",
+            "kuis" => $kuis
+        ]);
     }
 
     /**

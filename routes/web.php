@@ -43,11 +43,8 @@ Route::middleware(['auth', 'checkrole:admin'])->group(function () {
     Route::get('/kelolapost', [KelolaPostController::class, 'index'])->name('kelolapost');
     Route::get('/kelolapost/createpost', [KelolaPostController::class, 'create'])->name('createpost');
     Route::get('/kelolapost/editpost/{post}', [KelolaPostController::class, 'show'])->name('editpost');
-    Route::get('/kelolakuis', function () {
-        return view('kelolakuis', [
-            'title' => 'Kelola Kuis',
-        ]);
-    })->name('kelolakuis');
+    Route::get('/kelolakuis', [KuisController::class, 'kelola'])->name('kelolakuis');
+    Route::get('/kelolakuis/createkuis', [KuisController::class, 'create'])->name('createkuis');
 });
 
 // Authenticated-only routes
@@ -76,6 +73,7 @@ Route::put('/kelolapost/editpost/{post}', [KelolaPostController::class, 'update'
 Route::post('/kelolapost/createpost', [KelolaPostController::class, 'store'])->name('posts.store');
 Route::post('/kelolapost', [KelolaPostController::class, 'index'])->name('posts.index');
 Route::delete('/kelolapost/deletepost/{id}', [KelolaPostController::class, 'destroy'])->name('posts.destroy');
+Route::post('/kelolakuis/createkuis', [KuisController::class, 'store'])->name('kuis.store');
 
 // Include authentication routes
 require __DIR__ . '/auth.php';
