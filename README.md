@@ -64,7 +64,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## Preparation
 
-setelah Clone Repo
+Versi PHP yang dibutuhkan adalah diatas 8.1
 
 ```bash
     composer install
