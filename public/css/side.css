@@ -473,3 +473,27 @@ p {
     font-weight: bolder;
 
 }
+
+.keitaro {
+    align-self: flex-start;
+    max-width: 70%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.tengah {
+    align-self: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-ijo {
+    background-color: #268332;
+}
+
+#pesan {
+    text-align: center;
+    font-size: medium;
+    color: red;
+    font-weight: 500;
+  }
