@@ -66,6 +66,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware(
 Route::get('/kuis', [KuisController::class, 'index']);
 Route::get('/srq29', [KuisController::class, 'show']);
 Route::get('/ai', [AichatController::class, 'index']);
+Route::post('/ai', [AichatController::class, 'store']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/post/{post:slug}', [PostController::class, 'show']);
