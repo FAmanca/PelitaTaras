@@ -18,6 +18,6 @@
                 @endforeach
             </tbody>
         </table>
-        <a href="{{ route('createkuis') }}"><button type="button" class="btn btn-success">Tambah Kuis</button></a>
+        {{-- <a href="{{ route('createkuis') }}"><button type="button" class="btn btn-success">Tambah Kuis</button></a> --}}
     </main>
 @endsection

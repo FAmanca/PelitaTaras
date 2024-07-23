@@ -452,7 +452,8 @@ p {
 .sidebar .nav-links li a .adminlink {
     font-size: 18px;
     font-weight: bolder;
-    color: #7cb69d;
+    /* color: #7cb69d; */
+    color: #e28f30;
     transition: all 0.4s ease;
 }
 

@@ -23,9 +23,9 @@
                 font-size: 3.5rem;
             }
         }
-        body {
+        /* body {
             background-color: #e7d9d9;
-        }
+        } */
     </style>
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
