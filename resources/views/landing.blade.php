@@ -46,7 +46,7 @@
     <div class="about">
         <div class="container">
             <h2 class="subtitle">Tentang PelitaTaras</h2>
-            <p class="description">PELITA TARAS merupakan program kepedulan untuk menjaga Kesehatan mental
+            <p class="description">PELITA TARAS merupakan program kepedulian untuk menjaga Kesehatan mental
                 remaja baik
                 secara lahir maupun batin melalui edukasi pentingnya Kesehatan mental bagi tumbuh kembang remaja
                 serta

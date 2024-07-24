@@ -6,8 +6,7 @@ return [
     | Messenger display name
     |-------------------------------------
     */
-    // 'name' => env('CHATIFY_NAME', 'PELITA MESSAGE'),
-    'name' => 'PELITA CHAT',
+    'name' => env('PELITA CHAT', 'Chatify Messenger'),
 
     /*
     |-------------------------------------
@@ -23,17 +22,16 @@ return [
     |-------------------------------------
     */
     'routes' => [
-        'custom' => true,
-        'prefix' => 'pelitachat',
-        'middleware' => ['web', 'auth'],
-        'namespace' => 'App\Http\Controllers\vendor\Chatify',
+        'custom' => env('CHATIFY_CUSTOM_ROUTES', false),
+        'prefix' => env('CHATIFY_ROUTES_PREFIX', 'pelitachat'),
+        'middleware' => env('CHATIFY_ROUTES_MIDDLEWARE', ['web','auth']),
+        'namespace' => env('CHATIFY_ROUTES_NAMESPACE', 'Chatify\Http\Controllers'),
     ],
     'api_routes' => [
-        'prefix' => 'pelitachat/api',
-        'middleware' => ['api'],
-        'namespace' => 'App\Http\Controllers\vendor\Chatify\Api',
+        'prefix' => env('CHATIFY_API_ROUTES_PREFIX', 'pelitachat/api'),
+        'middleware' => env('CHATIFY_API_ROUTES_MIDDLEWARE', ['api']),
+        'namespace' => env('CHATIFY_API_ROUTES_NAMESPACE', 'Chatify\Http\Controllers\Api'),
     ],
-
 
     /*
     |-------------------------------------
@@ -121,6 +119,6 @@ return [
     'sounds' => [
         'enabled' => true,
         'public_path' => 'sounds/chatify',
-        'new_message' => 'yippe.mp3',
+        'new_message' => 'new-message-sound.mp3',
     ]
 ];
