@@ -1,6 +1,9 @@
 body {
     background: #e4e9f7;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
 
 * {
     margin: 0;

@@ -56,12 +56,12 @@
         </div>
     </div>
 
+    <audio id="background-music" src="{{ asset('music/Shikairo Days by Shika-bu.mp3') }}" loop></audio>
     <footer class="footer">
-        <p>PelitaTaras | &copy; {{ date('Y') }} Schale Organization. All rights reserved. <a id="play-music" style="display: none; cursor: pointer;">shika</a></p>
+        <p>PelitaTaras | &copy; {{ date('Y') }} Schale Organization. All rights reserved.</p>
+        {{-- <a id="play-music" style="display: none; cursor: pointer;">shika</a> --}}
     </footer>
 
-    <audio id="background-music" src="{{ asset('music/Shikairo Days by Shika-bu.mp3') }}" loop></audio>
-    <button id="play-music" style="display: none;">Play Music</button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
