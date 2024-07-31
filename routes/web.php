@@ -65,6 +65,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware(
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('checkauth');
 Route::get('/kuis', [KuisController::class, 'index']);
 Route::get('/srq29', [KuisController::class, 'show']);
+Route::post('/srq29/submit', [KuisController::class, 'submit'])->name('srq.submit');
 Route::get('/ai', [AichatController::class, 'index']);
 Route::post('/ai', [AichatController::class, 'store']);
 Route::get('/about', [AboutController::class, 'index']);

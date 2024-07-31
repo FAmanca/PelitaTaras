@@ -501,3 +501,83 @@ p {
     color: red;
     font-weight: 500;
   }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select.opsi {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.lpilihan {
+    font-size: 18px;
+}
+
+.srq {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan elemen */
+}
+
+.result {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sum h2 {
+    font-size: medium;
+}
+.sum p {
+    font-size: medium;
+}
+.result-details {
+    margin-top: 20px;
+    font-size: medium;
+}
+.result-item {
+    margin-bottom: 10px;
+}
+.result-label {
+    font-weight: bold;
+}
+.result-value {
+    margin-left: 10px;
+}
+.result-info {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.result .dataPengisi .data {
+    font-size: 20px;
+}
+.result .dataPengisi .data span{
+    font-weight: bold;
+}

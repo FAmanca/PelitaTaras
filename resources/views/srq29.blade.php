@@ -1,26 +1,27 @@
 @extends('layouts.main')
 
 @section('container')
-    <h1>Self Reporting Questionnaire (SRQ-29)</h1>
-    <form action="" method="" style="display: inline;" class="fform-check form-check-inline">
-        @foreach ($kuis as $k)
-            {{-- SOAL --}}
-            <div class="soal mt-5">
-                <p class="">{{ $k->nomor }}. {{ $k->soal }}</p>
-                <div class="options">
-                    <label>
-                        <input class="form-check-input" id="inlineCheckbox1" type="radio" name="question{{ $k->nomor }}" value="yes" required> Ya
-                    </label>    
-                    <label>
-                        <input class="form-check-input" id="inlineCheckbox2" type="radio" name="question{{ $k->nomor }}" value="no"> Tidak
-                    </label>
+    <div class="srq">
+        <form action="{{ route('srq.submit') }}" method="POST" style="display: inline;" class="fform-check form-check-inline">
+            @csrf
+            <h1 style="text-align: center">Self Reporting Questionnaire (SRQ-29)</h1>
+            @foreach ($kuis as $k)
+                <div class="soal mt-5">
+                    <div class="options">
+                        <label for="pilihan{{ $k->nomor }}" class="lpilihan">{{ $k->nomor }}.
+                            {{ $k->soal }}</label> <br>
+                        <select name="question{{ $k->nomor }}" id="pilihan{{ $k->nomor }}" class="opsi">
+                            <option value="" disabled selected>Pilih</option>
+                            <option value="ya">Ya</option>
+                            <option value="tidak">Tidak</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            {{-- AKHIR SOAL --}}
             @endforeach
             <br>
             <div>
-                <button type="submit" class="btn btn-danger">Kirim Tes</button>
+                <button type="submit" class="btn btn-success" style="width: 100%;">Kirim Tes</button>
             </div>
-    </form>
+        </form>
+    </div>
 @endsection
