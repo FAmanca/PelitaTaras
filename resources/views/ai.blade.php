@@ -19,11 +19,11 @@
 
 @section('container')
     <main>
-        <h1 class="tengah">Keitaro | AI</h1>
+        <h1 class="tengah">Yume | AI</h1>
         <h6 class="tengah">Konsultasi Dengan AI</h6>
         <hr>
         @if (isset($response))
-            <p class="keitaro" id="typingEffect"><strong>Keitaro :</strong> </p>
+            <p class="keitaro" id="typingEffect"><strong>Yume :</strong> </p>
             <script>
                 document.addEventListener("DOMContentLoaded", function() {
                     let responseText = {!! json_encode($response, JSON_PRETTY_PRINT) !!};
@@ -49,7 +49,7 @@
                 <input id="content" name="content" class="form-control form-control-lg" placeholder="Tulis pesan Anda di sini...">
                 <button type="submit" class="btn btn-success">Kirim</button>
             </form>
-            <p id="pesan">Keitaro masih dalam pengembangan.</p>
+            <p id="pesan">Yume masih dalam pengembangan.</p>
         </div>
     </main>
 @endsection

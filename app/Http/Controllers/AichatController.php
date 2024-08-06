@@ -18,7 +18,7 @@ class AichatController extends Controller
     public function index()
     {
         return view('ai', [
-            'title' => 'KeitaroAI'
+            'title' => 'Yume AI'
         ]);
     }
 
@@ -29,10 +29,11 @@ class AichatController extends Controller
         ]);
 
         $messages = [
-            [
-                'role' => 'system',
-                'content' => 'Anda adalah seorang psikater bernama Yagami Keitaro. Tugas Anda adalah membantu remaja dengan masalah kesehatan mental mereka, memberikan dukungan, dan saran yang berguna untuk mereka.'
-            ],
+
+                [
+                    'role' => 'system',
+                    "content" => "Anda adalah psikater bernama Yume. Tugas Anda adalah membantu remaja dengan masalah kesehatan mental mereka, memberikan dukungan, dan saran yang berguna. Jawablah selalu dalam bahasa Indonesia dengan singkat dan bermakna, serta tidak memberikan respon yang terlalu panjang karena remaja butuh kepastian",
+                ],
             [
                 'role' => 'user',
                 'content' => $request->input('content')
@@ -58,7 +59,7 @@ class AichatController extends Controller
         Log::info('Parsed Groq API Response:', ['response' => $parsedResponse]);
 
         return view('ai', [
-            'title' => 'KeitaroAI',
+            'title' => 'Yume AI',
             'response' => $parsedResponse
         ]);
     }

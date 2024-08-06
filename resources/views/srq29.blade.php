@@ -10,7 +10,7 @@
                     <div class="options">
                         <label for="pilihan{{ $k->nomor }}" class="lpilihan">{{ $k->nomor }}.
                             {{ $k->soal }}</label> <br>
-                        <select name="question{{ $k->nomor }}" id="pilihan{{ $k->nomor }}" class="opsi">
+                        <select name="question{{ $k->nomor }}" id="pilihan{{ $k->nomor }}" class="opsi" required>
                             <option value="" disabled selected>Pilih</option>
                             <option value="ya">Ya</option>
                             <option value="tidak">Tidak</option>
