@@ -12,7 +12,6 @@
                     <th scope="col">Kelas</th>
                     <th scope="col">Email</th>
                     <th scope="col">Role</th>
-                    <th scope="col">PW</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,7 +21,6 @@
                         <td>{{ $user->kelas }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->role }}</td>
-                        <td>{{ $user->password }}</td>
                     </tr>
                 @endforeach
             </tbody>
